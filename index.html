@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barbearia - Sistema de Agendamentos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="https://img.freepik.com/vetores-premium/modelo-de-logotipo-de-barbearia-vintage-estilo-retro-com-ilustracao-vetorial-de-homem-barbudo_939711-3153.jpg" alt="Logotipo da Barbearia" class="logo">
+      <h1 class="title">Blands Hair Style</h1>
+    </div>
+  </header>
+
+  <main>
+    <!-- Formulário principal para agendamentos -->
+    <section id="container-post" class="form-section">
+      <h2>Registro de Horário</h2>
+      <form id="form-agendamento">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" placeholder="Nome completo" required />
+        </div>
+        <div class="form-group">
+          <label for="data">Data:</label>
+          <input type="date" id="data" required />
+        </div>
+        <div class="form-group">
+          <label for="horario">Horário:</label>
+          <input type="time" id="horario" required />
+        </div>
+        <div class="form-group">
+          <label for="procedimento">Serviço:</label>
+          <input type="text" id="procedimento" placeholder="Ex: Corte, barba" />
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" placeholder="(XX) XXXXX-XXXX" required />
+        </div>
+        <button type="submit" class="btn-primary">Agendar</button>
+        <div id="error-message" class="error"></div>
+      </form>
+    </section>
+
+    <!-- Lista de agendamentos -->
+    <section id="agendamentos-section">
+      <h2>Seus agendamentos</h2>
+      <ul id="lista-agendamentos"></ul>
+    </section>
+
+    <!-- Modal de atualização -->
+    <div id="modal-atualizar" class="modal">
+      <h3>Atualizar Agendamento</h3>
+      <form id="form-atualizar">
+        <div class="form-group">
+          <label for="novo-nome">Novo Nome:</label>
+          <input type="text" id="novo-nome" placeholder="Nome completo" />
+        </div>
+        <div class="form-group">
+          <label for="nova-data">Nova Data:</label>
+          <input type="date" id="nova-data" />
+        </div>
+        <div class="form-group">
+          <label for="novo-horario">Novo Horário:</label>
+          <input type="time" id="novo-horario" />
+        </div>
+        <div class="form-group">
+          <label for="novo-procedimento">Novo Serviço:</label>
+          <input type="text" id="novo-procedimento" placeholder="Ex: Corte, barba" />
+        </div>
+        <div class="form-group">
+          <label for="novo-telefone">Novo Telefone:</label>
+          <input type="tel" id="novo-telefone" placeholder="(XX) XXXXX-XXXX" />
+        </div>
+        <div class="modal-actions">
+          <button type="submit" class="btn-primary">Salvar</button>
+          <button type="button" id="cancelar-atualizacao" class="btn-secondary">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
